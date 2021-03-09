@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Open Sans', Verdana;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button{
+    margin: 10px;
+    padding: 5PX;
+}
+h3{
+    text-align: center;
+}
+/* Clase clearFix para programar los elementos flotantes del html */
+.clearfix{
+    clear: both;
+    float: none;
+}
+.contenedor {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.boton{
+    height: 100px;
+    width: 150px;
+    margin: 10px 10px;
+    float: left;
+}
+.encabezado{
+    position: relative;
+    height: 40px;
+    width: 150px;
+    z-index: 1;
+}
+.imagen{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.numero{
+    width: 110px;
+    height: 40px;
+    float: left;
+}
+.numero p{
+    font-size: 35px;
+    text-align: right;
+}
+.informacion{  
+    position: relative;
+    height: 60px;
+    width: 150px;
+    z-index: 1;
+}
+.estado{
+    width: 150px;
+    height: 20px;
+}
+.hora{
+    width: 150px;
+    height: 20px;
+    color: red;
+}
+.recamarera{
+    width: 150px;
+    height: 20px;
+    color: blue;
+}
+.relleno{
+    position: relative;
+    top: -170px;
+    height: 70px;
+    width: 150px;
+    background: rgb(175,249,174);
+    background: linear-gradient(0deg, rgba(175,249,174,1) 0%, rgba(171,255,174,1) 84%, rgba(182,249,189,1) 97%, rgba(194,255,206,1) 100%);
+    transition: all ease 0.2s;
+    border-radius: 30px 0px 30px;
+} 
+.area{
+    position: relative;
+    background: transparent;
+    width: 150px;
+    height: 100px;
+    top: -100px;
+    z-index: 2;
+}
+.area:hover + p{
+    background: rgb(7,255,1);
+    background: linear-gradient(0deg, rgba(7,255,1,1) 0%, rgba(26,255,34,1) 84%, rgba(182,249,189,1) 97%, rgba(194,255,206,1) 100%);
+    transform: scale(1.1);
 }

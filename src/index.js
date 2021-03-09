@@ -1,17 +1,16 @@
+//libreria para trabajar con elementos JSX de REACT
 import React from 'react';
+//libreria para manipular los elementos del documento HTML
 import ReactDOM from 'react-dom';
+//importamos nuestra app
+import { TodoApp } from './components/Todo/TodoApp';
+//importamos la plantilla CSS
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//referenciamos el <div id="app"></div> del documento principal index.html
+//para poder hacer esta referencia se requiere importar el react-dom
+const divRoot = document.querySelector('#root');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//enviamos el componente principal al documento HTML usando el ReactDOM
+//los componentes de react se deben enviar con <>
+ReactDOM.render( <TodoApp /> , divRoot );
